@@ -1,0 +1,65 @@
+<! DOCTYPE HTML>
+<html>
+<head>
+	<style>
+	u.dotted{
+		border-bottom: 2px dotted;
+		text-decoration: none; 
+	}
+	
+	#info-block section {
+    	border: 2px solid black;
+	}
+
+	.file-marker > div {
+    	padding: 0 3px;
+    	height: 100px;
+    	margin-top: -0.8em;
+    }
+	.box-title {
+    	background: white none repeat scroll 0 0;
+    	display: inline-block;
+    	padding: 0 2px;
+    	margin-left: 1em;
+	}
+	</style>
+</head>
+<body>
+		<form action="/echo" method="POST">
+			<h1>Payment form</h1>
+			<p>Required fields are following by <u class="dotted">*</u>.</p>
+			<h2>Contact information</h2>
+			<aside id="info-block">
+				<section class="file-marker">
+					<div>
+						<div class="box-title">Title</div> <br>
+							<ul>
+								<li><input type="radio" name="gender" value="Mister">Mister</input></li>
+								<li><input type="radio" name="gender" value="Miss">Miss</input></li>
+							</ul>
+							<div class="box-contents">
+								<div id="audit-trail"></div>
+							</div>
+					</div>
+				</section>
+			</aside>
+			<p>Name: <u class="dotted">*</u> <input type="text" name="name"></p>
+			<p>E-mail: <u class="dotted">*</u> <input type="text" name="email"></p>
+			<p>Password: <u class="dotted">*</u> <input type="password" name="password"></p>
+
+			<h2>Payment information</h2>
+			<p>Card type:
+				<select name="cars">
+					<option value="Visa">Visa</option>
+					<option value="Master">Master</option>
+					<option value="AE">AE</option>
+					<option value="UnionPay">UnionPay</option>
+				</select>
+			</p>
+			<p>Card number: <u class="dotted">*</u> <input type="text" name="card_no"></p>
+			<p>Expiration date: <u class="dotted">*</u> <i>formatted as mm/yy</i> <input type="text" name="exp_dt" placeholder="yyyy/mm/dd"></p>
+			<p><button type="submit">Validate the payment</button></p>
+		</form>
+</body>
+</html>
+

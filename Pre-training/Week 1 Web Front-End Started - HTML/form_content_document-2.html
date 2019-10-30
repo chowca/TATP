@@ -1,0 +1,144 @@
+<! DOCTYPE HTML>
+<html>
+<head>
+	<style>
+	u.dotted{
+		border-bottom: 2px dotted;
+		text-decoration: none; 
+	}
+	
+	#info_block section {
+    	border: 2px solid black;
+	}
+
+	.file-marker > div {
+    	padding: 0 3px;
+    	margin-top: -0.8em;
+    }
+	.box-title {
+    	background: white none repeat scroll 0 0;
+    	display: inline-block;
+    	padding: 0 2px;
+    	margin-left: 1em;
+	}
+	</style>
+</head>
+<body>
+		<form action="/echo" method="POST">
+			<h2>SIOW BANK CREDIT CARD APPLICATION FORM</h2>
+			<p>Please fill in the form with BLOCK LETTERS, plase fill in the mandatory fields following by <u class="dotted">*</u>.</p>
+			<aside id="info_block">
+				<section class="file-marker">
+					<div>
+						<div class="box-title"><strong>Account information</strong> <i>(For existing banking customers only)</i></div><br>
+						<p>Account type: <u class="dotted">*</u>
+						<select name="ac_type">
+								<option value="PIA">Personal Integrated Account</option>
+								<option value="Advance">Advance</option>
+								<option value="Premium">Premium</option>
+						</select>
+						Account Number: <u class="dotted">*</u> <input type="text" name="ac_no" placeholder="xxx-xxxxxx-xxx"></p>
+						<div class="box-contents">
+							<div id="audit-trail"></div>
+						</div>
+					</div>
+				</section>
+			</aside>
+			<br>
+			<aside id="info_block">
+				<section class="file-marker">
+					<div>
+							<div class="box-title"><strong>Choice of credit card</strong><u class="dotted">*</u></div><br>
+							<ul>
+								<li><input type="radio" name="card_choice" value="Visa">Siow Bank Visa Card</input></li>
+								<li><input type="radio" name="card_choice" value="Mister">Siow Bank Master Card</input></li>
+								<li><input type="radio" name="card_choice" value="AE">Siow Bank AE Card</input></li>
+								<li><input type="radio" name="card_choice" value="UnionPay">Siow Bank UnionPay Card</input></li>
+							</ul>
+							<div class="box-contents">
+								<div id="audit-trail"></div>
+							</div>
+					</div>
+				</section>
+			</aside>
+			<br>
+			<aside id="info_block">
+				<section class="file-marker">
+					<div>
+						<div class="box-title"><strong>Personal information</strong><u class="dotted">*</u></div><br>
+							<p>
+								<input type="radio" name="gender" value="mr">MR</input>
+								<input type="radio" name="gender" value="miss">MISS</input>
+								<input type="radio" name="gender" value="mrs">MRS</input>
+								<input type="radio" name="gender" value="ms">MS</input>
+							</p>
+							<p>
+								Surname: <input type="text" name="s_name">
+								Given name: <input type="text" name="g_name">
+							</p>
+							<p>
+								Date of birth: <i>formatted as dd/mm/yyyy</i> <input type="text" name="b_date" placeholder="ddmmyyyy">
+								Place of birth: <input type="text" name="b_place">
+							</p>
+							<p>Nationality: <input type="text" name="nationality"></p>
+							<p>
+								ID Card/Passport Number: <input type="text" name="id_no">
+								Place of issue: <input type="text" name="issue_place">
+							</p>
+							<p>Education level: 
+								<input type="radio" name="edu" value="primary">Primary</input>
+								<input type="radio" name="edu" value="secondary">Secondary</input>
+								<input type="radio" name="edu" value="tertiary">Tertiary</input>
+								<input type="radio" name="edu" value="post_grad">Post-graduate</input>
+							</p> 
+							<p>Marital Status: 
+								<input type="radio" name="marital" value="single">Single</input>
+								<input type="radio" name="marital" value="married">Married</input>
+								<input type="radio" name="marital" value="divored">Divored</input>
+								<input type="radio" name="marital" value="other">Others: </input><input type="text" name="marital_other" placeholder="Please specify"></input>
+							</p>
+							<p>Residential Address: <input type="text" name="r_address" size="100"></p>
+							<div class="box-contents">
+								<div id="audit-trail"></div>
+							</div>
+						</div>
+				</section>
+			</aside>
+			<br>
+			<aside id="info_block">
+					<section class="file-marker">
+						<div>
+							<div class="box-title"><strong>Occupation</strong><u class="dotted">*</u></div><br>
+							<select name="occupation">
+									<option value="f_time">Full-time Employed</option>
+									<option value="p_time">Part-time Employed</option>
+									<option value="s_emp">Self Employed</option>
+									<option value="student">Student</option>
+									<option value="housewife">Housewife</option>
+									<option value="retired">Retired</option>
+									<option value="n_emp">Not Currently Employed</option>
+							</select>
+								<p>
+									Name of present employer: <input type="text" name="emp_name">
+									Nature of business: <input type="text" name="business_nature">
+								</p>
+								<p>
+									Business tel. no: <input type="text" name="b_tel">
+									Presnet position: <input type="text" name="position">
+								</p>
+								<p>Address of present employer: <input type="text" name="emp_address" size="100"></p>
+								<p>
+									Monthly basic salary: <input type="text" name="M_salary">
+									Other income (e.g. bonus, allowance): <input type="text" name="o_income">
+								</p>
+								<div class="box-contents">
+									<div id="audit-trail"></div>
+								</div>
+							</div>
+					</section>
+				</aside>
+			<p><button type="submit">Submit application</button></p>
+		</form>
+</body>
+</html>
+
