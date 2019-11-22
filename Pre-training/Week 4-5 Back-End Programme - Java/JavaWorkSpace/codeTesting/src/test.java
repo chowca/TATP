@@ -1,10 +1,16 @@
-public class test {
-    public static void main(String [] args){
-        String str1="abc";
-        Class cls1=str1.getClass();
-        Class cls2=String.class;
-        Class cls3=Class.forName("java.lang.String");
-        System.out.println(cls1==cls2);
-        System.out.println(cls1==cls3);
+class Person {
+    private int age = 10;
+    public Person(){
+        System.out.println("initialized age:"+age);
+    }
+    public int GetAge(int age){
+        this.age = age;
+        return this.age;
     }
 }
+public class Main {
+    public static void main(String[] args) {
+        Person Harry = new Person();
+        System.out.println("Harry's age is "+Harry.GetAge(12));
+    }
+} 
